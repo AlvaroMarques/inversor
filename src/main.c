@@ -43,7 +43,8 @@ int main() {
   for (i = 0; i < tam_buffer && buffer[i] != '\0'; i++){
   	if (buffer[i] == ' ' || buffer[i] == '\n'){
 		f = popFila(f);
-		printf(" ");
+		if (buffer[i] != '\n')
+			printf(" ");
 
 	}else{
 		f = addToFila(f, buffer[i]);
